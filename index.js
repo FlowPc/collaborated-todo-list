@@ -65,7 +65,7 @@ $(document).ready(function () {
   });
 
   $(document).on("click", ".task-marker", function () {
-    // Find the parent task-holder of the clicked checkbox
+    
     let taskHolder = $(this).closest(".task-holder");
 
     if ($(this).prop("checked")) {
