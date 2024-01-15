@@ -143,4 +143,156 @@
     border-radius: 50px;
     
   }
+  .to-do-body{
+ margin-top: 50px;
+ margin-left: 30px;
+ margin-bottom: 0px;
+ margin-right: 30px;
+}
+.constant-text-and-add-point{
+ display: flex;
+ justify-content: space-between;
+}
+.constant-text{
+ font-size: 35px;
+ color: black;
+ line-height: 16px;
+}
+.screen-splitter{
+ display: flex;
+ margin-top: 50px;
+}
+.category-holder{
+ border: 1px solid black;
+ margin-right: 50px;
+}
+.category{
+ display: flex;
+}
+.color-board{
+ height: 50px;
+ width: 50px;
+ background-color: brown;
+ border: 1px solid black;
+ border-radius: 50%;
+ margin-right: 20px;
+ margin-bottom: 20px;
+}
+.category-holder :nth-child(4){
+margin-bottom: 50px;
+}
+.task-hider{
+ margin-right: 10px;
+}
+.task-board{
+ display: grid;
+ grid-template-columns: auto auto;
+ gap: 10px;
+}
+.task-holder{
+ background-color: #a87515;
+ height: 180px;
+}
+.task-title-and-option-bar{
+ display: flex;
+ margin: 20px;
+}
+.task-title{
+ font-size: 30px;
+ font-weight: 600;
+ line-height: 21px;
+}
+.task-details{
+ margin: 20px;
+ font-size: 30px;
+}
+.category-color-and-task-marker{
+display: flex;
+justify-content: space-between;
+margin-right: 20px;
+}
+.task-board-category-color{
+ height: 20px;
+ width: 20px;
+ background-color: pink;
+ border: 1px solid black;
+ border-radius: 50%;
+  margin-left: 20px;
+ margin-right: 20px;
+ margin-bottom: 20px;
+}
+.task-marker{
+ margin-right: 10px;
+}
+.modal{
+ height: 100%;
+ width: 100%;
+ background-color: rgb(0, 0, 0, 0.6);
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ z-index: 10px;
+ top: 0;
+ left: 0;
+ display: none;
+}
+.input-board-outter{
+ position: relative;
+ top: 15%;
+ left: 30%;
+ height: 400px;
+ width: 700px;
+background-color: white;
+border-radius: 10px;
+}
+.input-board-inner{
+ position: relative;
+ top: 6%;
+ height: 350px;
+ margin: 50px;
+ background-color: #a87515;
+border-radius: 5px;
+}
+.input-box-holder{
+margin: 20px;
+}
+.action-btns-holder{
+ position: relative;
+ margin: 20px;
+ display: flex;
+ justify-content: space-between;
+}
+.action-btns{
+ margin-top: 20px;
+ padding: 10px 25px;
+ border-radius: 5px;
+ border: none;
+}
+
+.add-btn:hover{
+ background-color: #9696ee;
+}
+.cancel-btn:hover{
+background-color: #ec7878;
+}
+.task-adder{
+ font-size: 50px;
+ cursor: pointer;
+}
+.title-box{
+ height: 50px;
+ width:  500px;
+ border-radius: 10px;
+border: none;
+}
+.task-description-box{
+ height: 100px;
+ width:  500px;
+ border-radius: 10px;
+border: none;
+}
+
+
+
+
 
