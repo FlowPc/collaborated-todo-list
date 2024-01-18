@@ -32,8 +32,54 @@ $(document).ready(function(){
     $("#taskHolder").toggle();
   });
 
+  $(".create-category-btn").click(function () {
+    $(".categoryModal").show();
+  });
+
+  $(".cancel-category-btn").click(function (event) {
+    event.preventDefault();
+
+    $(".categoryModal").hide();
+
+    taskForm.trigger("reset");
+  });
+
   $(".task-adder").click(function () {
     $(".modal").show();
+  });
+
+  const categoryCreatingForm = $("#categoryCreatingForm");
+
+  $(".add-category-btn").click(function (event) {
+    event.preventDefault();
+
+    const categorySection = $(".categorySection");
+
+    const categoryTitle = $("#categoryTitle").val();
+
+    const categoryPinner = $(`<div class="category-display-board"></div>`);
+
+    categoryPinner.html(`
+    <p class="category-name">${categoryTitle}</p>`);
+
+    categorySection.append(categoryPinner);
+
+    const categorySectionTwo = $(".categorySectionTwo");
+
+    const categoryPinnerTwo = $(
+      ` 
+      <option class="">
+      ${categoryTitle}
+    </option>
+      `
+    );
+
+
+      categorySectionTwo.append(categoryPinnerTwo);
+
+    $(".categoryModal").hide();
+
+    categoryCreatingForm.trigger("reset");
   });
 
   const taskForm = $("#taskForm");
@@ -47,6 +93,11 @@ $(document).ready(function(){
 
     const taskDescription = $("#taskDescription").val();
 
+
+
+
+    
+
     const taskPinner = $(`<div class="task-display-board"></div>`);
 
     taskPinner.html(`<div class="task-holder" id="taskHolder">
@@ -55,7 +106,7 @@ $(document).ready(function(){
 
       <p class="task-title" id="taskTitle">${titleBox}</p>
 
-      <img src="" alt="" srcset="">
+      <div><button class="edit-btn" id="editBtn">Edit</button><button class="delete-btn" id="deleteBtn">Delete</button></div>
 
      </div>
 
@@ -78,12 +129,17 @@ $(document).ready(function(){
 
     </div>`);
 
+
     taskBoard.append(taskPinner);
 
     $(".modal").hide();
 
     taskForm.trigger("reset");
+
+
   });
+
+ 
 
   $(".cancel-btn").click(function (event) {
     event.preventDefault();
@@ -94,7 +150,6 @@ $(document).ready(function(){
   });
 
   $(document).on("click", ".task-marker", function () {
-    
     let taskHolder = $(this).closest(".task-holder");
 
     if ($(this).prop("checked")) {
@@ -114,7 +169,7 @@ $(document).ready(function(){
     const taskHolder = $("#taskHolder");
 
     if (taskHider.prop("checked") && taskMarker.prop("checked")) {
-      taskHolder.hide();
+      taskHolder.css("display", "none");
     } else {
       taskHolder.show();
     }
@@ -123,6 +178,4 @@ $(document).ready(function(){
   $("#taskHider").click(function () {
     hideDoneTask();
   });
-
-})
-
+ });
